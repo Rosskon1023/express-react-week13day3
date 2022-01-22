@@ -53,6 +53,11 @@ peoplesRouter.post("/people", async(req,res) => {
 // Edit
 
 // Show 
+peoplesRouter.get("/people/:id", async (req,res) => {
+    People.findById(req.params.id, (error, foundPerson) => {
+        res.json(foundPerson);
+    });
+});
 
 // Export the Router/Controller Object
 module.exports = peoplesRouter;
