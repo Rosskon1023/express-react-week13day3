@@ -5,6 +5,16 @@ const morgan = require('morgan');
 const cors = require('cors');
 require('dotenv').config();
 
+
+// const admin = require('firebase-admin');
+
+// const serviceAccount = require('./service-account-credentials.json');
+
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
+
+
 // Add Controllers
 const peoplesController = require('./controllers/peoples.js');
 
