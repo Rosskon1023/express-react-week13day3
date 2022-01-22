@@ -52,6 +52,15 @@ peoplesRouter.post("/people", async(req,res) => {
 
 // Edit
 
+//Test
+peoplesRouter.post("/peoplefsdfsdfsadfa", async(req,res) => {
+    try {
+        res.json(await People.create(req.body))
+    } catch (error) {
+        res.status(400).json(error)
+    }
+})
+
 // Show 
 peoplesRouter.get("/people/:id", async (req,res) => {
     People.findById(req.params.id, (error, foundPerson) => {
