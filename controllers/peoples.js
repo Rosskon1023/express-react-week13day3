@@ -6,7 +6,7 @@ const admin = require('firebase-admin');
 async function isAuthenticated(req, res, next) {
     try {
         const token = req.get("Authorization");
-        if(!token) throw new Error('you must be loggied in first')
+        if(!token) throw new Error('you must be logged in first')
         const user = await admin.auth().verifyIdToken(token.replace('Bearer ', ''));
         if(!user) throw new Error('something went wrong');
 

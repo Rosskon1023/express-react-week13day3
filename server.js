@@ -22,7 +22,7 @@ const peoplesController = require('./controllers/peoples.js');
 const app = express();
 
 // Configure Application Settings:
-const {PORT = 3001, DATABASE_URL} = process.env;
+const {PORT, DATABASE_URL} = process.env;
 
 // Connect to and Configure the Database
 mongoose.connect(DATABASE_URL);
