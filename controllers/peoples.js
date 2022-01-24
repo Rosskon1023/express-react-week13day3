@@ -1,8 +1,10 @@
 // Require Dependencies
 const express = require('express');
+require('dotenv').config();
 
 const admin = require('firebase-admin');
-const serviceAccount = require('../service-account-credentials.json');
+// const serviceAccount = require('../service-account-credentials.json');
+const serviceAccount = JSON.parse(process.env.GOOGLE_CREDS);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
